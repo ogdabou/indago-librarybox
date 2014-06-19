@@ -13,7 +13,6 @@
 
 
 ## ARTICLES LINKS ##
-* 
 * http://www.agenceinfolibre.fr/category/les_infos_dont_on_parle_peu/
 * http://www.voltairenet.org/
 * http://www.legrandsoir.info/

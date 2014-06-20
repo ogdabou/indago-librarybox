@@ -19,5 +19,5 @@
 * http://mondialisation.ca/
 * http://www.michelcollon.info/
 * http://www.atterres.org/
-
+* http://fr.ria.ru/
 * soral : http://www.egaliteetreconciliation.fr/

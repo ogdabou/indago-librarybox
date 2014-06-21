@@ -4,13 +4,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
 	<meta http-equiv="cache-control" content="no-cache">
-	<title>Indago - Latest</title>
+	<title>Indago</title>
 	<link rel="icon" href="favicon.ico">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/bootstrap-theme.css">
 	<link rel="stylesheet" href="css/font.css">
 	<link rel="stylesheet" href="css/structure.css">
-    <link rel="stylesheet" href="js/MetroJs.Full.0.9.75a/MetroJs.css">
 </head>
 <body>
 
@@ -34,7 +33,6 @@
 						<li><a href="/Shared/video/">Video</a></li>
 						<li><a href="/Shared/software/">Apps</a></li>
 						<li><a href="/Shared/">All Content</a></li>
-                        <li><a href="/content/about.html">Source List</a></li>
 						<li><a href="/content/stats.html">Statistics</a></li>
 						<li><a href="/content/about.html">About</a></li>
           </ul>
@@ -51,7 +49,7 @@
 			<div id="welcome">
 				<div class="container">
 					<h1><img src="img/lbx-logo-small.png">Welcome to Indago</h1>
-					<p>Here are the newest articles.</p><p>Indago is based on LibraryBox. "LibraryBox is private; no logs or other identifying data are retained."</p>
+					<p>Browse and download any of the available files, or chat with other users below.</p><p>LibraryBox is private; no logs or other identifying data are retained.</p>
 				</div>
 			</div>
 			<div class="container">
@@ -67,38 +65,25 @@
 				</div>
 
 				<div class="two-thirds" id="chatcontainer">
-					<!-- Apply blue theme as default for all tiles, but use the tiles class to allow the theme to be swapped -->
-                    <div class="tiles blue tile-group four-wide">
-                        <div class="live-tile" data-mode="flip">
-                            <span class="tile-title">slide tile</span>
-                            <div>Bonjour</div>
-                            <div>SALUT</div>
-                        </div>
-                    </div>
-                    
-                    <!-- Mango Flip List that triggers every 3 seconds -->
-                    <div class="list-tile mango">
-                        <span class="tile-title">flip list</span>
-                        <ul class="flip-list fourTiles" data-mode="flip-list" data-delay="2000">
-                            <li>
-                                <div>Bonjour</div>
-                                <div>SALUT</div>
-                            </li>
-                            <li>
-                                <div>Bonjour</div>
-                                <div>SALUT</div>
-                            </li>
-                            <li>
-                                <div>Bonjour</div>
-                                <div>SALUT</div>
-                            </li>
-                            <li data-direction="horizontal">
-                                <div>Bonjour</div>
-                                <div>SALUT</div>
-                            </li>
-                        </ul>
-                    </div>
-
+					<div id="chat" class="card last">
+						<h2>Chat</h2>
+						<div id="shoutbox" class="shoutbox_content"></div>
+						<form method="POST" name="psowrte" id="sb_form" >
+							<div id="shoutbox-input">
+								<input class="nickname" type="text" 	name="name" 	placeholder="Alias" value="Anonymous">
+								<input class="message" 	type="text" 	name="data" 	placeholder="Message...">
+								<button class="btn-default" type="submit" 	name="submit">Send</button>
+							</div>
+							<div id="shoutbox-options">
+								<h3>Text Color:</h3>
+								<label for="def" 	class="bg-black">	<input name="color" type="radio" value="def" 	id="def" checked>Default</label>
+								<label for="blue" 	class="bg-blue">	<input name="color" type="radio" value="blue" 	id="blue"		>Blue</label>
+								<label for="green" 	class="bg-green">	<input name="color" type="radio" value="green" 	id="green"		>Green</label>
+								<label for="orange" class="bg-orange">	<input name="color" type="radio" value="orange" id="orange"		>Orange</label>
+								<label for="red" 	class="bg-red">		<input name="color" type="radio" value="red" 	id="red"		>Red</label>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -113,22 +98,9 @@
 	</footer>
 
 	<script src="js/jquery.min.js"></script>
-	<!--<script src="js/main.js"></script>
+	<script src="js/main.js"></script>
 	<script src="js/files-top.js"></script>
-	<script src="js/vc_tally.js"></script>-->
+	<script src="js/vc_tally.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-    <script src="js/MetroJs.Full.0.9.75a/MetroJs.js"></script>
-    <script type="text/javascript">
-        // apply regular slide universally unless .exclude class is applied 
-        // NOTE: The default options for each liveTile are being pulled from the 'data-' attributes
-        $(".flip-list").not("exclude").liveTile();
-        // onClick version
-//        $(".live-tile").each(function(index){
-//            $(this).liveTile({ repeatCount: 0, delay:0 });
-//            $(this).click( function() {
-//                $(this).liveTile('play');
-//            })
-//        })
-    </script>
 </body>
 </html>

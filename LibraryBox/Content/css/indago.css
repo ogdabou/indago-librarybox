@@ -1,28 +1,18 @@
 .arrowed {
-    position: absolute;
     width: 28px;
     height: 28px;
-    right: 5px;
-    top: 65px;
-    -webkit-backface-visibility: hidden
 }
-
-.aritcle-list
+.article-list-item
 {
-    width:100%;   
+    background-color: red;
+    padding: 0;
+    margin: 0;
+    height: 150px;
 }
 
 .bg-arrow
 {
     background-color: black;
-    position: absolute;
-    right: 0px;
     width: 35px;
-    height: 150px;
-    -webkit-backface-visibility: hidden
-}
-
-.article-row
-{
-    
+    height: 100%;
 }

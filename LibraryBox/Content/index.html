@@ -56,7 +56,7 @@
 				</div>
 			</div>
 			<div class="container">
-				<div class="one-third">
+				<div class="col-md-4">
 					<div id="files-top" class="card">
 						<h2>Most viewed</h2>
 
@@ -64,37 +64,18 @@
 					<div id="jquery-testing">
 					</div>
 				</div>
-
-				<div class="two-thirds" id="chatcontainer">
-                    <div class="tiles tile-group">
-                        <div class="tile-strip aritcle-list">
-                            <ul class="flip-list fourTiles" data-mode="flip-list" data-delay="2000">
-                                <div class="live-tile mango four-wide">
-                                    <div><div class="bg-arrow"><img class="arrowed" src="img/arrow-left.png"></img></div>La réunion secrète du 11 juin 1965 sur l’Union monétaire européenne</div>
-                                    <div><div class="bg-arrow"><img class="arrowed" src="img/arrow-left.png"></img></div>SALUT</div>
+				<div class="col-md-8">
+                    <div class="aritcle-list">
+                            <div class="article-list-item row">
+                                <div class="article-switch col-md-10 col-xs-10">
+                                    <div><span>La réunion secrète du 11 juin 1965 sur l’Union monétaire européenne</span></div>
+                                    <div><span>SALUT</span></div>
                                 </div>
-                                <div class="live-tile blue four-wide">
-                                    <div><div class="bg-arrow"> <div class="arrowed"></div></div>La réunion secrète du 11 juin 1965 sur l’Union monétaire européenne</div>
-                                    <div><div class="bg-arrow"><div class="arrowed"></div> </div>SALUT</div>
+                                <div class="bg-arrow pull-right">
+                                    <img class="arrowed" src="img/arrow-left.png"></img>
                                 </div>
-                                <div class="live-tile red four-wide">
-                                    <div>
-                                        <div class="bg-arrow"><div class="arrowed"></div></div>
-                                        La réunion secrète du 11 juin 1965 sur l’Union monétaire européenne
-                                    </div>
-                                    <div>
-                                        <div class="bg-arrow"><div class="arrowed"></div></div>
-                                        SALUT
-                                    </div>
-                                </div>
-                                <div class="live-tile mango four-wide">
-                                    <div><div class="bg-arrow"> <div class="arrowed"></div></div>La réunion secrète du 11 juin 1965 sur l’Union monétaire européenne</div>
-                                    <div><div class="bg-arrow"><div class="arrowed"></div> </div>SALUT</div>
-                                </div>
-                            </ul>
-                        </div>
+                            </div>
                     </div>
-
 				</div>
 			</div>
 		</section>
@@ -117,14 +98,14 @@
     <script type="text/javascript">
         // apply regular slide universally unless .exclude class is applied 
         // NOTE: The default options for each liveTile are being pulled from the 'data-' attributes
-        $(".flip-list").not("exclude").liveTile();
-        // onClick version
-//        $(".live-tile").each(function(index){
-//            $(this).liveTile({ repeatCount: 0, delay:0 });
-//            $(this).click( function() {
-//                $(this).liveTile('play');
-//            })
-//        })
+        /*$(".flip-list").not("exclude").liveTile();*/
+//         onClick version
+        /*$(".live-tile").each(function(index){
+            $(this).liveTile({ repeatCount: 0, delay:0 });
+            $(this).click( function() {
+                $(this).liveTile('play');
+            })
+        })*/
     </script>
 </body>
 </html>

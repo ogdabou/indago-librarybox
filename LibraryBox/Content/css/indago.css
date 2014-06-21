@@ -3,7 +3,6 @@
     width: 28px;
     height: 28px;
     right: 5px;
-    /*background-image: url("/img/indago/arrow-left.png");*/
     top: 65px;
 }
 
@@ -14,6 +13,7 @@
 
 .bg-arrow
 {
+    background-color: black;
     position: absolute;
     right: 0px;
     width: 35px;

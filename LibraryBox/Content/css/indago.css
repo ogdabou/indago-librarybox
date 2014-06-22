@@ -4,14 +4,47 @@
 }
 .article-list-item
 {
-    background-color: red;
+    /*background-color: red;*/
     padding: 0;
     margin: 0;
     height: 150px;
+    /*background-size: 100% 200%;
+    background-image: linear-gradient(to bottom, green 50%, black 50%);
+    -webkit-transition: background-position 1s;
+    -moz-transition: background-position 1s;
+    transition: background-position 1s;*/
+}
+
+.article-switch
+{
+    padding: 0;
+    margin: 0;
+    height: 150px;
+    background-size: 100% 200%;
+    background-image: linear-gradient(to bottom, green 50%, black 50%);
+    -webkit-transition: background-position 1s;
+    -moz-transition: background-position 1s;
+    transition: background-position 1s;
+    overflow: hidden;
+}
+
+
+.article-switch.active
+{
+    background-position: 0 100%;
+    color: white;
+}
+
+
+.article-list-item.active
+{
+    background-position: 0 100%;
+    color: white;
 }
 
 .bg-arrow
 {
+    float:right;
     background-color: black;
     width: 35px;
     height: 100%;

@@ -59,22 +59,51 @@
 				<div class="col-md-4">
 					<div id="files-top" class="card">
 						<h2>Most viewed</h2>
-
 					</div>
 					<div id="jquery-testing">
 					</div>
 				</div>
 				<div class="col-md-8">
+                    <div id="files-top" class="card">
+						<h2>Newest</h2>
+					</div>
                     <div class="aritcle-list">
-                            <div class="article-list-item row">
-                                <div class="article-switch col-md-10 col-xs-10">
-                                    <div><span>La réunion secrète du 11 juin 1965 sur l’Union monétaire européenne</span></div>
-                                    <div><span>SALUT</span></div>
-                                </div>
-                                <div class="bg-arrow pull-right">
-                                    <img class="arrowed" src="img/arrow-left.png"></img>
-                                </div>
+                        <div class="article-list-item row">
+                            <div class="bg-arrow">
+                                <img class="arrowed" src="img/arrow-left.png"></img>
                             </div>
+                            <div class="article-switch nopadding">
+                                <div class="shown"><span>La réunion secrète du 11 juin 1965 sur l’Union monétaire européenne</span></div>
+                                <div class="not-shown"><span>SALUT</span></div>
+                            </div>
+                        </div>
+                        <div class="article-list-item row">
+                            <div class="bg-arrow">
+                                <img class="arrowed" src="img/arrow-left.png"></img>
+                            </div>
+                            <div class="article-switch nopadding">
+                                <div class="shown"><span>La réunion secrète du 11 juin 1965 sur l’Union monétaire européenne</span></div>
+                                <div class="not-shown"><span>SALUT</span></div>
+                            </div>
+                        </div>
+                        <div class="article-list-item row">
+                            <div class="bg-arrow">
+                                <img class="arrowed" src="img/arrow-left.png"></img>
+                            </div>
+                            <div class="article-switch nopadding">
+                                <div class="shown"><span>La réunion secrète du 11 juin 1965 sur l’Union monétaire européenne</span></div>
+                                <div class="not-shown"><span>SALUT</span></div>
+                            </div>
+                        </div>
+                        <div class="article-list-item row">
+                            <div class="bg-arrow">
+                                <img class="arrowed" src="img/arrow-left.png"></img>
+                            </div>
+                            <div class="article-switch nopadding">
+                                <div class="shown"><span>La réunion secrète du 11 juin 1965 sur l’Union monétaire européenne</span></div>
+                                <div class="not-shown"><span>SALUT</span></div>
+                            </div>
+                        </div>
                     </div>
 				</div>
 			</div>
@@ -96,16 +125,20 @@
 	<script src="js/bootstrap.min.js"></script>
     <script src="js/MetroJs.Full.0.9.75a/MetroJs.js"></script>
     <script type="text/javascript">
-        // apply regular slide universally unless .exclude class is applied 
-        // NOTE: The default options for each liveTile are being pulled from the 'data-' attributes
-        /*$(".flip-list").not("exclude").liveTile();*/
-//         onClick version
-        /*$(".live-tile").each(function(index){
-            $(this).liveTile({ repeatCount: 0, delay:0 });
-            $(this).click( function() {
-                $(this).liveTile('play');
+        $(".not-shown").hide();
+        
+        $(".article-switch").click(function(){
+            $(".article-switch").removeClass("active").each(function(index, element) {
+                $(element).find(".shown").show();
+                $(element).find(".not-shown").hide();
             })
-        })*/
+            if(!$(this).hasClass("active"))
+            {
+                $(this).addClass("active");
+                $(this).find(".shown").hide();
+                $(this).find(".not-shown").show("1000");
+            }
+        });
     </script>
 </body>
 </html>

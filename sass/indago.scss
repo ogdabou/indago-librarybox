@@ -1,0 +1,43 @@
+@import "compass";
+
+
+$article-list-item-size: 120px;
+
+.arrowed {
+    width: 28px;
+    height: 28px;
+}
+
+.bg-arrow
+{
+    float:right;
+    background-color: black;
+    width: 35px;
+    height: 100%;
+}
+
+.article-list-item
+{
+    padding: 0;
+    margin: 0;
+    height: $article-list-item-size;
+}
+
+.article-switch
+{
+    padding: 0;
+    margin: 0;
+    height: $article-list-item-size;
+    background-size: 100% 200%;
+    @include background-image(linear-gradient(top, green 50%, black 50%));
+    @include transition-property(background-position);
+    @include transition-duration(1s);
+    overflow: hidden;
+}
+
+.article-switch.active
+{
+    background-position: 0 100%;
+    color: white;
+}
+

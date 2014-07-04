@@ -2,37 +2,77 @@
 
 
 $article-list-item-size: 120px;
+$article-list-item-gradiant: 40%;
+$bg-orange: #c03d14;
 
 .arrowed {
     width: 28px;
     height: 28px;
 }
 
+.botinfo
+{
+    position: absolute;
+    line-height: 100%;
+    color: white;
+    text-align: center;
+    margin-top: 100px;
+    @include backface-visibility(hidden);
+}
+
 .bg-arrow
 {
-    float:right;
-    background-color: black;
-    width: 35px;
-    height: 100%;
+/*    float:right;
+    width: $article-list-item-size;
+    height: 36px;
+    z-index: 150;
+    right: -27px;*/
+    /*position:absolute;
+    @include backface-visibility(hidden);
+    @include transform(rotate(90deg) translate(42px));*/
 }
+
+.bg-arrow.black
+{
+    background-color: black;   
+}
+
+.bg-arrow.orange
+{
+    background-color: $bg-orange;   
+}
+
+
 
 .article-list-item
 {
     padding: 0;
     margin: 0;
+    margin-bottom: 10px;
     height: $article-list-item-size;
 }
 
 .article-switch
 {
-    padding: 0;
+    padding: 5px;
     margin: 0;
     height: $article-list-item-size;
     background-size: 100% 200%;
-    @include background-image(linear-gradient(top, green 50%, black 50%));
-    @include transition-property(background-position);
-    @include transition-duration(1s);
     overflow: hidden;
+}
+
+.article-switch.black
+{
+    @include background-image(linear-gradient(top, lightgray $article-list-item-gradiant, black $article-list-item-gradiant));
+    @include transition-property(background-position);
+    @include transition-duration(1s); 
+}
+
+.article-switch.orange
+{
+    @include background-image(linear-gradient(top, lightgray $article-list-item-gradiant, $bg-orange $article-list-item-gradiant));
+    @include transition-property(background-position);
+    @include transition-duration(1s); 
 }
 
 .article-switch.active
